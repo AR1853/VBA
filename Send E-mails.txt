@@ -1,0 +1,118 @@
+Option Base 1       'Fuerza a los array a comenzar en 1
+Option Explicit     'Fuerza la declaración de variables
+
+'Declaraciones a nivel del módulo
+Dim CuentaEnviable As Integer  'Retiene el conteo de rubios
+Dim MiArray()                'Retiene el nombre de los receptores
+Dim MiContador As Integer    'Contador usado para completar el array
+Dim MiTitulo As String       'Retiene el título del email
+
+Sub SeleccionaEnviable()
+
+    MiTitulo = "Agustin Racchi CV."
+
+    'Selecciona la hoja correcta
+    Hoja1.Select
+    
+    'Contar los rubios
+    CuentaEnviable = Application.WorksheetFunction.CountIf(Range("E:E"), "Enviable")
+
+    'Redimensiona el array (ahora que sabemos la cantidad de rubios)
+    '2 elementos...1 para el primer nombre, 1 para la dirección de email
+    ReDim MiArray(CuentaEnviable, 2)
+
+    'Busca el primer rubio en la columna E
+    Columns("E:E").Select
+    Selection.Find(What:="Enviable", After:=ActiveCell, LookIn:=xlFormulas, _
+        LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+        MatchCase:=False, SearchFormat:=False).Activate
+    'Elige el primer valor encontrado
+    ActiveCell.Select
+    
+    'Inicializa el contador
+    MiContador = 0
+    
+    'Hace loop para obtener los datos
+    While ActiveCell.Value <> ""
+    
+        'Verifica si ya capturamos todos los registros
+        If MiContador = CuentaEnviable Then GoTo secciónEmail
+        
+        'Si aun no están todos, hacer loop para capturar la información
+        If ActiveCell.Value = "Enviable" Then
+            'Incrementa el valor de MiContador en 1
+            MiContador = MiContador + 1
+            'Obtener el primer nombre
+            MiArray(MiContador, 1) = _
+                Left(ActiveCell.Offset(0, -4), InStr(ActiveCell.Offset(0, -4).Value, " ") - 1)
+            'Obtener la dirección de email
+            MiArray(MiContador, 2) = ActiveCell.Offset(0, 2).Value
+            'Desplazarse una celda hacia abajo
+            ActiveCell.Offset(1, 0).Select
+        Else
+            'Desplazarse una celda hacia abajo
+            ActiveCell.Offset(1, 0).Select
+        End If
+    Wend
+
+'Etiqueta (llegaremos hasta aquí solo si tenemos todos los registros antes de terminar la tabla)
+secciónEmail:
+
+    'Hacer loop enviando todos los emails
+    For MiContador = 1 To CuentaEnviable
+            
+        'Llama a la rutina de emails
+        'Nota: como el array fue declarado a nivel del módulo...
+        '... tgodas las variables (el contenido) se pasan a la sub del mail
+        EnviaEmails
+        
+    Next MiContador
+
+    'Go back to top of page
+    Range("A1").Select
+
+End Sub
+
+
+Private Sub EnviaEmails()
+
+Dim AppOutlook As Object        'Declara a Outlook como un objeto
+Dim EmailSaliente As Object     'Declara al email como un objeto
+Dim CuerpoDeTexto As String     'Retiene el mensaje a enviar
+    
+    'Crea un objeto para Outlook
+    Set AppOutlook = CreateObject("Outlook.Application")
+    'Crea un objeto para el email
+    Set EmailSaliente = AppOutlook.CreateItem(0)
+
+    'Construye el texto para el cuerpo del mensaje (puede leerse en rangos desde Excel)
+    CuerpoDeTexto = "Que tal buenos días mi nombre es Agustín Racchi." & _
+                    vbNewLine & vbNewLine & _
+                    "Me gustaría compartir mi curriculum con su empresa a fin de que pueda ser tenido en cuenta para futuras búsquedas laborales." & _
+                    vbNewLine & vbNewLine & _
+                    "Desde ya muchas gracias. " & vbNewLine & _
+                    vbNewLine & vbNewLine & _
+                    "Saludos cordiales."
+
+    'Anula los mensajes de error (unas que dicen "alguien está intentando enviar un email")
+    On Error Resume Next
+    
+    With EmailSaliente
+        .To = MiArray(MiContador, 2)
+        '.CC = ""
+        '.BCC = ""
+        .Subject = MiTitulo
+        .Body = CuerpoDeTexto
+        .Attachments.Add ("C:\Users\Agustin Racchi\Documents\CV Agustín Racchi\Agustín Racchi.pdf")
+        .Send
+    End With
+    
+    'Cancela el bloqueo de errores
+    On Error GoTo 0
+
+    'Destruye las variables
+    '  (en el orden inverso al que se declararon)
+    Set EmailSaliente = Nothing
+    Set AppOutlook = Nothing
+
+End Sub

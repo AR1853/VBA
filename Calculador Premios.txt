@@ -1,0 +1,164 @@
+Sub Premios_Escalas_TN()
+Range("L:L").ClearContents
+Range("H2").Select
+
+Do While ActiveCell.Value <> ""
+
+    If ActiveCell.Value = Workbooks("Libro1").Sheets("Hoja2").Range("C2") Then
+        If ActiveCell.Offset(0, 3).Value >= 250 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C18")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 220 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C17")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 200 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C16")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 150 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C15")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 130 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C14")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 100 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C13")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 80 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C12")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 50 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 1 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        
+        End If
+    
+    End If
+    
+ActiveCell.Offset(1, 0).Select
+
+Loop
+            
+End Sub
+
+Sub Premios_Escalas_ActividadeS()
+
+Range("L:L").ClearContents
+Range("H2").Select
+
+Do While ActiveCell.Value <> ""
+
+    If ActiveCell.Value = Workbooks("Libro1").Sheets("Hoja2").Range("C2") Then
+        If ActiveCell.Offset(0, 3).Value >= 250 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C18")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 220 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C17")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 200 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C16")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 150 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C15")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 130 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C14")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 100 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C13")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 80 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C12")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 50 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 1 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        
+        End If
+    
+    ElseIf ActiveCell.Value = Workbooks("Libro1").Sheets("Hoja2").Range("D2") Then
+        
+        If ActiveCell.Offset(0, 3).Value >= 250 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D18")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 220 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D17")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 200 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D16")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 150 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D15")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 130 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D14")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 100 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D13")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 80 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D12")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 50 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D11")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 1 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D11")
+        
+        End If
+    
+    End If
+    
+    
+ActiveCell.Offset(1, 0).Select
+
+Loop
+          
+End Sub
+
+Sub Lugares_Vacíos()
+
+Range("C2").Select
+
+Do While ActiveCell.Value <> ""
+
+ActiveCell.Offset(0, 9).Select
+
+If ActiveCell.Value = "" Then
+
+ActiveCell.Offset(0, -4).Select
+        
+    If ActiveCell.Value = Workbooks("Libro1").Sheets("Hoja2").Range("C2") Then
+        If ActiveCell.Offset(0, 3).Value >= 250 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C18")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 220 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C17")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 200 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C16")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 150 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C15")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 130 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C14")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 100 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C13")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 80 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C12")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 50 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 1 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("C11")
+        
+        End If
+    
+    ElseIf ActiveCell.Value = Workbooks("Libro1").Sheets("Hoja2").Range("D2") Then
+        
+        If ActiveCell.Offset(0, 3).Value >= 250 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D18")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 220 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D17")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 200 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D16")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 150 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D15")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 130 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D14")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 100 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D13")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 80 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D12")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 50 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D11")
+        ElseIf ActiveCell.Offset(0, 3).Value >= 1 Then
+            ActiveCell.Offset(0, 4).Value = Workbooks("Libro1").Sheets("Hoja2").Range("D11")
+        
+        End If
+    End If
+    ActiveCell.Offset(1, -5).Select
+    
+Else: ActiveCell.Offset(1, -9).Select
+
+End If
+
+
+Loop
+
+End Sub

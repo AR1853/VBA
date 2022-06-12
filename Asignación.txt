@@ -1,0 +1,378 @@
+Sub AsignacionFranja2()
+
+Range("B2").Select
+
+If ActiveCell.Value = "A" Then
+
+Do While ActiveCell.Value = "A"
+
+ActiveCell.Offset(0, 17).Select
+
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C9") Then
+    ActiveCell.Offset(0, 1).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C10") Then
+    ActiveCell.Offset(0, 1).Value = 6
+    Else
+    ActiveCell.Offset(0, 1).Value = 7
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C9") Then
+    ActiveCell.Offset(0, 2).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_A").Range("C10") Then
+    ActiveCell.Offset(0, 2).Value = 6
+    Else
+    ActiveCell.Offset(0, 2).Value = 7
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+If ActiveCell.Value = "B" Then
+
+Do While ActiveCell.Value = "B"
+
+ActiveCell.Offset(0, 17).Select
+
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C9") Then
+    ActiveCell.Offset(0, 1).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C10") Then
+    ActiveCell.Offset(0, 1).Value = 6
+    Else
+    ActiveCell.Offset(0, 1).Value = 7
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C9") Then
+    ActiveCell.Offset(0, 2).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_B").Range("C10") Then
+    ActiveCell.Offset(0, 2).Value = 6
+    Else
+    ActiveCell.Offset(0, 2).Value = 7
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+
+If ActiveCell.Value = "C" Then
+
+Do While ActiveCell.Value = "C"
+
+ActiveCell.Offset(0, 17).Select
+
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C9") Then
+    ActiveCell.Offset(0, 1).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C10") Then
+    ActiveCell.Offset(0, 1).Value = 6
+    Else
+    ActiveCell.Offset(0, 1).Value = 7
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C9") Then
+    ActiveCell.Offset(0, 2).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_C").Range("C10") Then
+    ActiveCell.Offset(0, 2).Value = 6
+    Else
+    ActiveCell.Offset(0, 2).Value = 7
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+
+
+If ActiveCell.Value = "D" Then
+
+Do While ActiveCell.Value = "D"
+
+ActiveCell.Offset(0, 17).Select
+
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C9") Then
+    ActiveCell.Offset(0, 1).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C10") Then
+    ActiveCell.Offset(0, 1).Value = 6
+    Else
+    ActiveCell.Offset(0, 1).Value = 7
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C9") Then
+    ActiveCell.Offset(0, 2).Value = 5
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_D").Range("C10") Then
+    ActiveCell.Offset(0, 2).Value = 6
+    Else
+    ActiveCell.Offset(0, 2).Value = 7
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+
+
+If ActiveCell.Value = "E" Then
+
+Do While ActiveCell.Value = "E"
+
+ActiveCell.Offset(0, 17).Select
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    Else
+    ActiveCell.Offset(0, 1).Value = 5
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_E").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    Else
+    ActiveCell.Offset(0, 2).Value = 5
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+
+If ActiveCell.Value = "H" Then
+
+Do While ActiveCell.Value = "H"
+
+ActiveCell.Offset(0, 17).Select
+
+
+If ActiveCell.Value = 0 Then
+ActiveCell.Offset(0, 1).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C5") Then
+    ActiveCell.Offset(0, 1).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C6") Then
+    ActiveCell.Offset(0, 1).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C7") Then
+    ActiveCell.Offset(0, 1).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C8") Then
+    ActiveCell.Offset(0, 1).Value = 4
+    Else
+    ActiveCell.Offset(0, 1).Value = 5
+    
+    End If
+    
+ActiveCell.Offset(1, -18).Select
+
+
+ElseIf ActiveCell.Value > 0 Then
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C6") Then
+    ActiveCell.Offset(0, 2).Value = 2
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C7") Then
+    ActiveCell.Offset(0, 2).Value = 3
+    ElseIf ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_H").Range("C8") Then
+    ActiveCell.Offset(0, 2).Value = 4
+    Else
+    ActiveCell.Offset(0, 2).Value = 5
+    
+    End If
+    
+    ActiveCell.Offset(1, -17).Select
+    
+    
+End If
+
+Loop
+
+End If
+
+
+
+If ActiveCell.Value = "P" Then
+
+Do While ActiveCell.Value = "P"
+
+ActiveCell.Offset(0, 17).Select
+
+
+    If ActiveCell.Value <= Workbooks("12-01-2022").Sheets("CKCP_PM").Range("C5") Then
+    ActiveCell.Offset(0, 2).Value = 1
+    
+    End If
+    
+ActiveCell.Offset(1, -17).Select
+
+Loop
+
+End If
+
+End Sub

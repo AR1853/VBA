@@ -1,0 +1,100 @@
+
+Public Sub Premios()
+    Dim Fila As Double
+    Fila = 2
+    
+    Do Until Cells(Fila, "H") = ""
+    
+    Select Case Cells(Fila, "H")
+    Case Is = "Embolse Automática 25 Kg": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B4")
+    Case Is = "Embolse Automática 50 Kg": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B5")
+    Case Is = "Big Bag Silo Chapa": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B2")
+    Case Is = "Descarga Big Bag": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B3")
+    Case Is = "Embolse Directa": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B6")
+    Case Is = "Embutida": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B7")
+    Case Is = "Extracción": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B8")
+    Case Is = "Granel": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B10")
+    Case Is = "Peladora": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B11")
+    Case Is = "Portería": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B12")
+    Case Is = "Producción": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B13")
+    Case Is = "Push Pull ": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B14")
+    Case Is = "Tolva": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B15")
+    Case Is = "Fraccionado ": Cells(Fila, "L") = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B9")
+    Case Else: Cells(Fila, "L") = "Ver Premio"
+     
+     
+
+    End Select
+    Fila = Fila + 1
+    
+    Loop
+    
+End Sub
+
+Sub Calculo_de_Premios()
+
+Range("O:O").ClearContents
+Range("H2").Select
+
+Do While ActiveCell.Value <> ""
+    
+    If ActiveCell.Value = "Embolse Automática 25 Kg" Then
+        ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B4")
+    
+        
+    ElseIf ActiveCell.Value = "Embolse Automática 50 Kg" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B5")
+            
+    ElseIf ActiveCell.Value = "Big Bag Silo Chapa" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B2")
+            
+    ElseIf ActiveCell.Value = "Descarga Big Bag" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B3")
+            
+    ElseIf ActiveCell.Value = "Embolse Directa" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B6")
+            
+    ElseIf ActiveCell.Value = "Embutida" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B7")
+            
+    
+    ElseIf ActiveCell.Value = "Extracción" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B8")
+            
+    
+    ElseIf ActiveCell.Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("A9") Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B9")
+            
+    
+    ElseIf ActiveCell.Value = "Granel" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B10")
+            
+    
+    ElseIf ActiveCell.Value = "Peladora" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B11")
+            
+    
+    ElseIf ActiveCell.Value = "Portería" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B12")
+            
+    
+    ElseIf ActiveCell.Value = "Producción" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B13")
+            
+    
+    ElseIf ActiveCell.Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("A14") Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B14")
+            
+    ElseIf ActiveCell.Value = "Tolva" Then
+            ActiveCell.Offset(0, 7).Value = Workbooks("Premios Individuales Prueba. Versión Macro").Sheets("Tarifa").Range("B15")
+            
+
+    End If
+
+    ActiveCell.Offset(1, 0).Select
+
+
+Loop
+
+
+End Sub
